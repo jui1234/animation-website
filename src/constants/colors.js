@@ -9,7 +9,7 @@ export const COLORS = {
   NEON_LIME_GREEN: '#B6FF00',
   
   // Background colors
-  BLACK: '#000000',
+  BLACK: '#0b0b0b',
   DARK_GRAY: '#333333',
   GRAY: '#666666',
   LIGHT_GRAY: '#999999',

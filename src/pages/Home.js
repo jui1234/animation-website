@@ -47,8 +47,9 @@ const Home = () => {
     if (!wrapper || !heroSection || !image) return;
 
     // Set initial states - show combined component
-    gsap.set(heroSection, { opacity: 1, scale: 1, width: "400px", height: "400px", borderRadius: "50%" });
+    gsap.set(heroSection, { opacity: 1, scale: 1, width: "300px", height: "300px", borderRadius: "50%",left: "50%",top: "50%" });
     gsap.set(image, { opacity: 1, scale: 1, z: 0 });
+    // gsap.set(neonContentRef.current, { backgroundColor: "red"});
 
     // Create the scroll trigger animation
     gsap.timeline({
@@ -58,7 +59,7 @@ const Home = () => {
         end: "+=300%",
         pin: true,
         scrub: 1,
-        markers: true
+        markers: false
       }
     })
     // First: Image scales up and moves forward
@@ -68,6 +69,7 @@ const Home = () => {
       transformOrigin: "center center",
       ease: "power1.inOut",
       duration: 0.5
+      
     })
     // Then: Content expands from circular to full width
     .to(heroSection, {
